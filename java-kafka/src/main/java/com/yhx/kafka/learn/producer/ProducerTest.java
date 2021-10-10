@@ -12,7 +12,7 @@ import java.util.concurrent.ExecutionException;
  * @date 2021/10/9 11:26
  */
 public class ProducerTest {
-    private static final String TOPIC = "test-topic";
+    private static final String TOPIC = "mykafka";
 
     public static void main(String[] args) {
         Producer<String, String> producer = ProducerCreator.createProducer();

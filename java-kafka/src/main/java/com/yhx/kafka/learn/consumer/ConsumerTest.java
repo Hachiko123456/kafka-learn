@@ -13,7 +13,7 @@ import java.util.Collections;
  * @date 2021/10/9 11:26
  */
 public class ConsumerTest {
-    private static final String TOPIC = "test-topic";
+    private static final String TOPIC = "mykafka";
 
     public static void main(String[] args) {
         Consumer<String, String> consumer = ConsumerCreator.createConsumer();
@@ -25,7 +25,7 @@ public class ConsumerTest {
             ConsumerRecords<String, String> consumerRecords =
                     consumer.poll(Duration.ofMillis(1000));
             for (ConsumerRecord<String, String> consumerRecord : consumerRecords) {
-                System.out.println("Consumer consume message:" + consumerRecord.value());
+                System.err.println("Consumer consume message:" + consumerRecord.value());
             }
         }
     }
